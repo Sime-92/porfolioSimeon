@@ -1,0 +1,105 @@
+/* Estilo para el contenedor principal */
+.main-content {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; /* Para manejar correctamente la imagen de fondo y otros elementos */
+}
+
+/* Ajustes para la imagen de fondo */
+.background-image img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centra la imagen horizontalmente */
+    z-index: -1; /* Asegura que la imagen quede detrás del contenido */
+}
+
+/* Resto de tus estilos */
+.navbar {
+    background-color: #f8f9fa;
+
+}
+.audio-player {
+    /* Estilos para tu reproductor de audio */
+}
+
+
+/*Efectos*/
+    /*Simeon*/
+.navbar-brand:hover {
+    color: #007bff; /* Cambia el color al pasar el ratón */
+    transform: scale(1.05); /* Hace el texto ligeramente más grande */
+    transition: all 0.3s ease-in-out; /* Añade una transición suave */
+}
+/*Elementos de navegación*/
+.nav-link {
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #28a745; /* Cambia el color al pasar el ratón */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    position: relative;
+}
+
+.nav-link:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #28a745; /* Color del subrayado */
+    visibility: visible;
+    transform: scaleX(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: transparent;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+/*Reproductor de música*/
+
+.audio-player {
+    /* Añade aquí tus estilos */
+    text-align: center; 
+    width: 100%; /* Ajusta según sea necesario */
+    height: auto;
+}
+
+.audio-player button {
+    cursor: pointer;
+    margin: 5px;
+    font-size: 20px;
+    transform: translateY(510px); /* Ajusta 20px al valor que necesites para bajar los botones */
+}
+
+/*REspolnsive cara botones*/
+/* Para pantallas más grandes */
+
+/* Para pantallas medianas */
+@media (max-width: 767px) {
+    .audio-player button {
+        transform: translateY(350px); /* Ajusta para pantallas medianas */
+    }
+}
+
+/* Para pantallas pequeñas, como móviles */
+@media (max-width: 480px) {
+    .audio-player button {
+        transform: translateY(106px); /* Ajusta para pantallas pequeñas */
+    }
+}
