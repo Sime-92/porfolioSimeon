@@ -1,0 +1,21 @@
+@media (max-width: 840px){
+    .background-image img {
+      
+        transform: translateX(-50%) translateY(9%);
+      }
+     #texto-typewriter{
+        padding-top: 5rem;
+        font-size: 0.8rem;
+     }
+}
+
+@media (max-width: 550px){
+    .background-image img {
+      
+        transform: translateX(-50%) translateY(9%);
+      }
+     #texto-typewriter{
+       padding: 0;
+        font-size: 0.8rem;
+     }
+}

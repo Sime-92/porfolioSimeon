@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simeón París</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <!-- Añadir Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+
 <body>
+
     <div class="main-content">
         <div class="background-image">
-            <img src="img/montana.png" alt="Fondo">
+            <img src="img/disfruta.png" alt="Fondo"  class="default-image">
+            
         </div>
 
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">Simeón París</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,36 +35,42 @@
                         <a class="nav-link" href="sobre_mi.html">Sobre mí</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
+                        <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <div class="container">
+        
             <div class="audio-player">
                 <audio id="myAudio">
                     <source src="musica.mp3" type="audio/mpeg">
                     Tu navegador no soporta el elemento de audio.
                 </audio>
-                <button id="rewind">⏪</button>
-                <button id="play">▶️</button>
-                <button id="forward">⏩</button>
-                <button id="stop">⏹️</button>
-            </div>
+                <button id="rewind"></button>
+                <button id="play">
+                    <div class="play-icon"></div>
+                    <div class="pause-icon"></div>
+                </button>
+
+                <button id="forward"></button>
+
             
+
         </div>
     </div>
-    
 
-    
+    <button id="back-to-top" title="Volver arriba"><i class="fas fa-arrow-up"></i></button>
     <!-- Añadir Bootstrap JS y dependencias -->
     <script src="jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="musica.js"></script>
-</body> 
+    <script src="buttonBackToTop.js"></script>
+    <script src="fundido.js"></script>
+</body>
+
 </html>

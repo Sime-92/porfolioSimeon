@@ -1,57 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simeón París- Sobre mi</title>
+    <title>Simeón París</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sobremi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <!-- Añadir Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
-        .contenedor {
-            background-image: url('img/montaña.png'); /* Reemplaza 'montaña.jpg' con la ruta de tu imagen */
-            background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-position: center; /* Centra la imagen en la página */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed;
-        }
-        .navbar {
-            background-color: white;
-        }
-        .audio-player {
-            /* Estilos para tu reproductor de audio */
-        }
-    </style>
 </head>
-<body>
-    <div class="contenedor">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html">Inicio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#sobremi">Proyectos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#proyectos">contacto</a>
-                </li>
-              
-            </ul>
-        </div>
-    </nav>
 
-    <div class="container">
-        <div class="audio-player">
-            <!-- Aquí irá tu reproductor de audio -->
+<body>
+
+    <div class="main-content">
+        <div class="background-image">
+            <img src="img/foto2.jpg" alt="Fondo">
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">Simeón París</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!--pARRAFO-->
+        <div id="texto-typewriter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, laborum neque,
+             labore ipsum dolores culpa rerum unde illum amet,
+             quibusdam ipsa cumque sequi numquam esse voluptas eum ex cum at <br>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, laborum neque,
+             labore ipsum dolores culpa rerum unde illum amet,
+             quibusdam ipsa cumque sequi numquam esse voluptas eum ex cum at.
         </div>
     </div>
-</div>
+
+    <button id="back-to-top" title="Volver arriba"><i class="fas fa-arrow-up"></i></button>
     <!-- Añadir Bootstrap JS y dependencias -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="buttonBackToTop.js"></script>
+    <script src="fundido.js"></script>
+    <script src="maquinaEscribir.js"></script>
 </body>
+
 </html>

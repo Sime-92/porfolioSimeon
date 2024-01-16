@@ -1,36 +1,28 @@
-
 $(document).ready(function() {
     var audio = $("#myAudio")[0];
-    var stopButton = $("#stop");
+    var playIcon = $(".play-icon");
+    var pauseIcon = $(".pause-icon");
 
-    // Ocultar inicialmente el botón de stop
-    stopButton.hide();
+    // Inicializa el ícono de pause como oculto
+    pauseIcon.hide();
 
     $("#play").click(function() {
         if (audio.paused) {
             audio.play();
-            $(this).text('⏸️'); // Cambia el icono a pausa
-            stopButton.show(); // Muestra el botón de stop
+            playIcon.hide(); // Oculta el ícono de play
+            pauseIcon.show(); // Muestra el ícono de pause
         } else {
             audio.pause();
-            $(this).text('▶️'); // Cambia el icono a play
-            stopButton.hide(); // Oculta el botón de stop si la música se detiene
+            playIcon.show(); // Muestra el ícono de play
+            pauseIcon.hide(); // Oculta el ícono de pause
         }
     });
 
-    $("#stop").click(function() {
-        audio.pause();
-        audio.currentTime = 0;
-        $("#play").text('▶️'); // Reinicia el icono de play
-        stopButton.hide(); // Oculta el botón de stop
-    });
-
     $("#forward").click(function() {
-        audio.currentTime += 10; // Adelanta 10 segundos
+        audio.currentTime += 10; // Adelanta 10 segundos en la pista de audio
     });
 
     $("#rewind").click(function() {
-        audio.currentTime -= 10; // Retrocede 10 segundos
+        audio.currentTime -= 10; // Retrocede 10 segundos en la pista de audio
     });
 });
-
